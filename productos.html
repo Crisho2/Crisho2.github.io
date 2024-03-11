@@ -5,20 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Productos de Madera</title>
     <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de tener el archivo style.css en tu proyecto -->
+    <style>
+        /* Añade estilos específicos para organizar los productos en una cuadrícula */
+        #productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
 
+        .producto {
+            border: 2px solid #333;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .producto img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        h3, p {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 
 <body>
 
     <header>
-        <h1>Bienvenido a la Tienda de Productos de Madera</h1>
+        <h1>Bienvenid@s a Maderono</h1>
     </header>
 
     <nav>
         <a href="index.html">Inicio</a> |
         <a href="productos.html">Productos</a> |
-        <a href="info-contacto.html">Información</a> |
-    
+        <a href="info-contacto.html">Información</a>
     </nav>
 
     <main>
