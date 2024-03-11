@@ -1,47 +1,49 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
 
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
+        /* Estilos básicos para mejorar la apariencia, personaliza según sea necesario */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 0.5em;
+            text-align: center;
+        }
 
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
-}
+        main {
+            padding: 1em;
+        }
 
-nav ul li a:hover {
-    color: #666;
-}
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
 
-main {
-    margin: 20px;
-}
+        .producto {
+            border: 1px solid #ddd;
+            padding: 1em;
+            margin-bottom: 1em;
+            background-color: #fff;
+        }
 
-.whatsapp-button {
-    display: inline-block;
-    background-color: green;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
+        .carro {
+            border: 1px solid #ddd;
+            padding: 1em;
+            background-color: #fff;
+            margin-top: 1em;
+        }
+  
+        
