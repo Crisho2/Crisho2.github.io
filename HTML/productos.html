@@ -1,22 +1,51 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Productos de Madera</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de tener el archivo style.css en tu proyecto -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Asegúrate de tener acceso a la biblioteca de Bootstrap -->
+
     <style>
-        /* Añade estilos específicos para organizar los productos en una cuadrícula */
-        #productos {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        main {
+            padding: 1em;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            margin-bottom: 20px;
         }
 
         .producto {
             border: 2px solid #333;
             padding: 10px;
             border-radius: 10px;
+            text-align: center;
         }
 
         .producto img {
@@ -50,13 +79,23 @@
         <h1>Bienvenid@s a Maderono</h1>
     </header>
 
-    <nav>
-        <a href="index.html">Inicio</a> |
-        <a href="productos.html">Productos</a> |
-        <a href="info-contacto.html">Información</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="info-contacto.html">Información</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <main>
+    <main class="container">
 
         <section id="bienvenida">
             <h2>Bienvenido a nuestra tienda</h2>
@@ -65,66 +104,76 @@
 
         <section id="productos">
             <h2>Nuestros Productos</h2>
-        <div class="productos-todos">
-            <!-- Producto 1 -->
-            <div class="producto">
-                <img src="imagen1.jpg" alt="Producto 1">
-                <h3>Producto 1</h3>
-                <p>Precio: $50.00</p>
-                <p>Descripción: Un hermoso producto de madera hecho a mano.</p>
-                <button onclick="agregarAlCarro(1)">Agregar al Carro</button>
-            </div>
+            <div class="row">
+                <!-- Producto 1 -->
+                <div class="col-md-4">
+                    <div class="producto">
+                        <img src="imagen1.jpg" alt="Producto 1">
+                        <h3>Producto 1</h3>
+                        <p>Precio: $50.00</p>
+                        <p>Descripción: Un hermoso producto de madera hecho a mano.</p>
+                        <button class="btn btn-primary" onclick="agregarAlCarro(1)">Agregar al Carro</button>
+                    </div>
+                </div>
 
-            <!-- Producto 2 -->
-            <div class="producto">
-                <img src="imagen2.jpg" alt="Producto 2">
-                <h3>Producto 2</h3>
-                <p>Precio: $65.00</p>
-                <p>Descripción: Otro increíble producto artesanal de madera.</p>
-                <button onclick="agregarAlCarro(2)">Agregar al Carro</button>
-            </div>
+                <!-- Producto 2 -->
+                <div class="col-md-4">
+                    <div class="producto">
+                        <img src="imagen2.jpg" alt="Producto 2">
+                        <h3>Producto 2</h3>
+                        <p>Precio: $65.00</p>
+                        <p>Descripción: Otro increíble producto artesanal de madera.</p>
+                        <button class="btn btn-primary" onclick="agregarAlCarro(2)">Agregar al Carro</button>
+                    </div>
+                </div>
 
-            <!-- Producto 3 -->
-            <div class="producto">
-                <img src="imagen3.jpg" alt="Producto 3">
-                <h3>Producto 3</h3>
-                <p>Precio: $40.00</p>
-                <p>Descripción: Una opción asequible y de alta calidad.</p>
-                <button onclick="agregarAlCarro(3)">Agregar al Carro</button>
-            </div>
+                <!-- Producto 3 -->
+                <div class="col-md-4">
+                    <div class="producto">
+                        <img src="imagen3.jpg" alt="Producto 3">
+                        <h3>Producto 3</h3>
+                        <p>Precio: $40.00</p>
+                        <p>Descripción: Una opción asequible y de alta calidad.</p>
+                        <button class="btn btn-primary" onclick="agregarAlCarro(3)">Agregar al Carro</button>
+                    </div>
+                </div>
 
-            <!-- Producto 4 -->
-            <div class="producto">
-                <img src="imagen4.jpg" alt="Producto 4">
-                <h3>Producto 4</h3>
-                <p>Precio: $75.00</p>
-                <p>Descripción: Elegante diseño de madera para tu hogar.</p>
-                <button onclick="agregarAlCarro(4)">Agregar al Carro</button>
-            </div>
+                <!-- Producto 4 -->
+                <div class="col-md-4">
+                    <div class="producto">
+                        <img src="imagen4.jpg" alt="Producto 4">
+                        <h3>Producto 4</h3>
+                        <p>Precio: $75.00</p>
+                        <p>Descripción: Elegante diseño de madera para tu hogar.</p>
+                        <button class="btn btn-primary" onclick="agregarAlCarro(4)">Agregar al Carro</button>
+                    </div>
+                </div>
 
-            <!-- Producto 5 -->
-            <div class="producto">
-                <img src="imagen5.jpg" alt="Producto 5">
-                <h3>Producto 5</h3>
-                <p>Precio: $55.00</p>
-                <p>Descripción: Un regalo perfecto hecho a mano.</p>
-                <button onclick="agregarAlCarro(5)">Agregar al Carro</button>
+                <!-- Producto 5 -->
+                <div class="col-md-4">
+                    <div class="producto">
+                        <img src="imagen5.jpg" alt="Producto 5">
+                        <h3>Producto 5</h3>
+                        <p>Precio: $55.00</p>
+                        <p>Descripción: Un regalo perfecto hecho a mano.</p>
+                        <button class="btn btn-primary" onclick="agregarAlCarro(5)">Agregar al Carro</button>
+                    </div>
+                </div>
             </div>
-        </div>
-
         </section>
 
         <!-- Resto del contenido ... -->
 
     </main>
 
-    <footer>
-        <p>© 2024 Tienda de Productos de Madera</p>
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <p class="text-muted">© 2024 Tienda de Productos de Madera</p>
+        </div>
     </footer>
 
-    <script>
-        // Funciones JavaScript ... (igual que antes)
-    </script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
