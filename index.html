@@ -1,84 +1,103 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Productos de Madera</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de tener el archivo style.css en tu proyecto -->
-    
-    <style>
-        
-        /* Estilos básicos ... (igual que antes) */
-
-        /* Estilo del icono de carro en la esquina superior derecha */
-        #carro-icon {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            font-size: 24px;
-            cursor: pointer;
-            color: #333;
-        }
-
-        /* Estilo para resaltar el icono cuando hay productos en el carro */
-        #carro-icon.con-productos {
-            color: #ff6347; /* Coral */
-        }
-    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Bienvenid@ a Maderono</h1>
+    <header class="bg-dark text-white text-center py-4">
+        <h1 class="m-0">Bienvenid@s a Maderono</h1>
     </header>
 
-    <nav>
-        <a href="index.html">Inicio</a> |
-        <a href="productos.html">Productos</a> |
-        <a href="info-contacto.html">Información & Contacto</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Inicio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="info-contacto.html">Información</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <!-- Icono de Carro -->
-    <div id="carro-icon" onclick="mostrarCarro()">
-        🛒
-    </div>
-
-    <main>
+    <main class="container mt-4">
 
         <section id="bienvenida">
-            <h2>Bienvenido a nuestra tienda</h2>
-            <p>Descubre nuestros productos de madera hechos a mano con amor y habilidad artesanal.</p>
+            <h2 class="text-center">Bienvenido a nuestra tienda</h2>
+            <p class="text-center">Descubre nuestros productos de madera hechos a mano con amor y habilidad artesanal.</p>
         </section>
 
-        <section id="carro" class="carro">
-            <h2>Carro de Compra</h2>
-            <p id="mensajeCarro">Tu carro está vacío.</p>
-            <ul id="listaCarro"></ul>
-            <p>Total: $<span id="totalCarro">0.00</span></p>
-            <button onclick="realizarCompra()">Realizar Compra</button>
-        </section>
+        <section id="productos">
+            <h2 class="text-center mb-4">Nuestros Productos</h2>
+            <div class="row">
+                <!-- Producto 1 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="imagen1.jpg" class="card-img-top" alt="Producto 1">
+                        <div class="card-body">
+                            <h3 class="card-title">Producto 1</h3>
+                            <p class="card-text">Precio: $50.00</p>
+                            <p class="card-text">Descripción: Un hermoso producto de madera hecho a mano.</p>
+                            <button class="btn btn-primary btn-block" onclick="agregarAlCarro(1)">Agregar al Carro</button>
+                        </div>
+                    </div>
+                </div>
 
-    </main>
+                <!-- Producto 2 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="imagen2.jpg" class="card-img-top" alt="Producto 2">
+                        <div class="card-body">
+                            <h3 class="card-title">Producto 2</h3>
+                            <p class="card-text">Precio: $65.00</p>
+                            <p class="card-text">Descripción: Otro increíble producto artesanal de madera.</p>
+                            <button class="btn btn-primary btn-block" onclick="agregarAlCarro(2)">Agregar al Carro</button>
+                        </div>
+                    </div>
+                </div>
 
-    <footer>
-        <p>© 2024 Tienda de Productos de Madera</p>
-    </footer>
+                <!-- Producto 3 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="imagen3.jpg" class="card-img-top" alt="Producto 3">
+                        <div class="card-body">
+                            <h3 class="card-title">Producto 3</h3>
+                            <p class="card-text">Precio: $40.00</p>
+                            <p class="card-text">Descripción: Una opción asequible y de alta calidad.</p>
+                            <button class="btn btn-primary btn-block" onclick="agregarAlCarro(3)">Agregar al Carro</button>
+                        </div>
+                    </div>
+                </div>
 
-    <script>
-        // Funciones JavaScript ... (igual que antes)
+                <!-- Producto 4 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="imagen4.jpg" class="card-img-top" alt="Producto 4">
+                        <div class="card-body">
+                            <h3 class="card-title">Producto 4</h3>
+                            <p class="card-text">Precio: $75.00</p>
+                            <p class="card-text">Descripción: Elegante diseño de madera para tu hogar.</p>
+                            <button class="btn btn-primary btn-block" onclick="agregarAlCarro(4)">Agregar al Carro</button>
+                        </div>
+                    </div>
+                </div>
 
-        // Nueva función para mostrar el carro al hacer clic en el icono
-        function mostrarCarro() {
-            const seccionCarro = document.getElementById('carro');
-            seccionCarro.style.display = (seccionCarro.style.display === 'none' || seccionCarro.style.display === '') ? 'block' : 'none';
-
-            // Agregar clase para resaltar el icono cuando hay productos en el carro
-            const iconoCarro = document.getElementById('carro-icon');
-            iconoCarro.classList.toggle('con-productos', carro.length > 0);
-        }
-    </script>
-
-</body>
-</html>
+                <!-- Producto 5 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="imagen5.jpg" class="card-img-top" alt="Producto 5"
